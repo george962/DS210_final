@@ -5,7 +5,7 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::Write;
 use std::process::Command;
-
+//this is a test
 pub fn generate_graph(graph: &Graph<i32, ()>) {
     let dot = format!("{:?}", Dot::with_config(graph, &[]));
     let mut file = File::create("graph.dot").expect("Unable to create file");
