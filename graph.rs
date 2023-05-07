@@ -15,7 +15,7 @@ pub fn create_graph() -> Graph<i32, ()> {
 
     let mut line_buffer = String::new();
 
-    for line in reader.lines().take(200) {
+    for line in reader.lines().take(8000) {
         line_buffer.clear();
         line_buffer.push_str(&line.unwrap());
         let nodes: Vec<&str> = line_buffer.split_whitespace().collect();
