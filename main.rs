@@ -1,11 +1,12 @@
 //import necessary libraries
-mod graph;
 use petgraph::dot::{Config, Dot};
 use petgraph::Graph;
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::Write;
 use std::process::Command;
+use relative_path::RelativePath;
+
 
 //generates two files "graph.dot" and "graph.txt" which contain the DOT representation of the input graph
 //one has edges and the other doesn't
