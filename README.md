@@ -1,7 +1,7 @@
 Link to dataset: https://snap.stanford.edu/data/roadNet-CA.html
 
 Final Report
-
+            
 Author: George Jiang
 
 1. Introduction
@@ -29,9 +29,11 @@ I then calculated the centrality of each node in the graph using the degree cent
 </div>
 
 3. Analysis
+
 Based on the entire dataset, node 571924 has the highest centrality and plays the most crucial role in connecting the road networks in California. I find it interesting that the centrality remains the same for nodes 2 to 3 and for 3 to the end of the figure. This tells me that there could be multiple paths between two nodes to take, so the centrality measure may be evenly split for those paths, which would explain the same centrality measure for different nodes. However, to gain a deeper understanding of the nodes' meaning, it would be necessary to consult domain experts familiar with the specifics of the road network or through another possible way. Even though the centrality measure I got appears to be small, in reality, that is to be expected for such a large dataset.
 
 4. Conclusion
+
 In conclusion, I analyzed a dataset of road networks using Rust and calculated the centrality of each node in the network. My analysis identifies the most important nodes in the network, which is useful for real world applications such as transportation planning and infrastructure development. Overall, the analysis conducted provides valuable insights into the centrality of nodes in the California road network, highlighting important areas that warrant further investigation or consideration in transportation planning and network optimization.
 
 
@@ -54,5 +56,11 @@ In conclusion, I analyzed a dataset of road networks using Rust and calculated t
 
 Works Cited
 
-“California Road Network.” SNAP, https://snap.stanford.edu/data/roadNet-CA.html. 
+“California Road Network.” SNAP, https://snap.stanford.edu/data/roadNet-CA.html.
+Leskovec, Jure, et al. “Community Structure in Large Networks: Natural Cluster Sizes and the Absence of Large Well-Defined Clusters.” ArXiv.org, 8 Oct. 2008, https://arxiv.org/abs/0810.1355. 
+“Crate Petgraph.” Petgraph - Rust, https://docs.rs/petgraph/latest/petgraph/. 
+“The Rust Programming Language.” How to Write Tests - The Rust Programming Language, https://doc.rust-lang.org/book/ch11-01-writing-tests.html. 
+“Crate Dot [−] [Src].” Dot - Rust, https://docs.rs/dot/latest/dot/. 
+JaredJared 4, et al. “What's the De-Facto Way of Reading and Writing Files in Rust 1.x?” Stack Overflow, 1 Mar. 1962, https://stackoverflow.com/questions/31192956/whats-the-de-facto-way-of-reading-and-writing-files-in-rust-1-x. 
+“Compute Centrality Scores to Measure the Importance of Entities.” Compute Centrality Scores to Measure the Importance of Entities-ArcGIS Pro | Documentation, https://pro.arcgis.com/en/pro-app/latest/help/data/knowledge/compute-centrality-scores-to-measure-the-importance-of-link-chart-entities.htm. 
 
