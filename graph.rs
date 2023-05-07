@@ -1,9 +1,8 @@
-//use petgraph::dot::{Config, Dot};
+//import modules
 use petgraph::graph::Graph;
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
-//use std::process::Command;
 use petgraph::prelude::NodeIndex;
 
 pub fn create_graph() -> Graph<i32, ()> {
@@ -15,6 +14,7 @@ pub fn create_graph() -> Graph<i32, ()> {
 
     let mut line_buffer = String::new();
 
+    //limited to first 8000 lines as the file is too big
     for line in reader.lines().take(8000) {
         line_buffer.clear();
         line_buffer.push_str(&line.unwrap());
