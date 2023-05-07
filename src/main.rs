@@ -1,5 +1,5 @@
 //import necessary libraries
-mod graph
+mod graph;
 use petgraph::dot::{Config, Dot};
 use petgraph::Graph;
 use std::collections::HashMap;
