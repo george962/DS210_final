@@ -21,7 +21,8 @@ pub fn generate_graph(graph: &Graph<i32, ()>) {
 
 }
 
-//calculates the centrality of each node and writes the top 100 highest centrality to the "output.txt" file
+//calculates the centrality of each node
+//writes the top 100 highest centrality to the "output.txt" file
 pub fn calculate_centrality(graph: &Graph<i32,()>) {
     let num_nodes = graph.node_count() as f64;
 
