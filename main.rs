@@ -1,3 +1,4 @@
+//import necessary libraries
 mod graph;
 use petgraph::dot::{Config, Dot};
 use petgraph::Graph;
@@ -5,7 +6,10 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::Write;
 use std::process::Command;
-//this is a test
+
+//generates two files "graph.dot" and "graph.txt" which contain the DOT representation
+//of the input graph
+//one has edges and the other doesn't
 pub fn generate_graph(graph: &Graph<i32, ()>) {
     let dot = format!("{:?}", Dot::with_config(graph, &[]));
     let mut file = File::create("graph.dot").expect("Unable to create file");
@@ -18,6 +22,7 @@ pub fn generate_graph(graph: &Graph<i32, ()>) {
 
 }
 
+//calculates the centrality of each node and writes the top 100 highest centrality to the "output.txt" file
 pub fn calculate_centrality(graph: &Graph<i32,()>) {
     let num_nodes = graph.node_count() as f64;
 
@@ -36,9 +41,10 @@ pub fn calculate_centrality(graph: &Graph<i32,()>) {
         writeln!(file, "{:?}: {}", node_index.index(), centrality).unwrap();
     }
 
-
 }
 
+//generates a graph image from "graph.txt" using the Graphviz 'dot' command
+//image saved as "graph.png"
 pub fn generate_image() {
     let output = Command::new("/opt/homebrew/bin/dot")
         .arg("-Tpng")
@@ -57,7 +63,7 @@ pub fn generate_image() {
     }
 }
 
-
+//uses the functions to complete the program
 pub fn main() {
     let graph = graph::create_graph();
 
@@ -81,14 +87,9 @@ pub fn main() {
     generate_image();
     println!("t")
 
-
-    
-    
-
 }
 
-
-
+//tests to verify that the function "generate_image" and "generate_graph" have the expected output
 #[cfg(test)]
 mod tests {
     use super::*;
