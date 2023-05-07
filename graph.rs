@@ -4,11 +4,9 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 use petgraph::prelude::NodeIndex;
-use relative_path::{RelativePath, RelativePathBuf};
 
 pub fn create_graph() -> Graph<i32, ()> {
-    let path = RelativePathBuf::from_path("src/roadNet-CA.txt").unwrap();
-    let file = File::open(&path).expect("Unable to open file");
+    let file = File::open("/Users/georgejiang/College/First Year/Second Semester/DS 210/final_project/src/roadNet-CA.txt").expect("Unable to open file");
     let reader = BufReader::new(file);
 
     let mut graph = Graph::new();
