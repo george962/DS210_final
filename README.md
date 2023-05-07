@@ -1,5 +1,11 @@
 Link to dataset: https://snap.stanford.edu/data/roadNet-CA.html
 
+Note:
+1. Download the dataset from the link above and save it in the same directory as main.rs and graph.rs
+2. CD to the directory and run the command "cargo build"
+3. Once that finishes run the command "cargo run --release"
+
+
 Final Report
             
 Author: George Jiang
