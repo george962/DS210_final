@@ -7,8 +7,7 @@ use std::fs::File;
 use std::io::Write;
 use std::process::Command;
 
-//generates two files "graph.dot" and "graph.txt" which contain the DOT representation
-//of the input graph
+//generates two files "graph.dot" and "graph.txt" which contain the DOT representation of the input graph
 //one has edges and the other doesn't
 pub fn generate_graph(graph: &Graph<i32, ()>) {
     let dot = format!("{:?}", Dot::with_config(graph, &[]));
