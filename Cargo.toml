@@ -11,5 +11,5 @@ dot = "0.1.4"
 itertools = "0.10.0"
 
 [[bin]]
-name = "main"
-path = "DS210_final/main.rs"
+name = "ds210_final"
+path = "src/main.rs"
