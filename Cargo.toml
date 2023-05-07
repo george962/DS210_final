@@ -9,3 +9,7 @@ edition = "2021"
 petgraph = "0.6.0"
 dot = "0.1.4"
 itertools = "0.10.0"
+
+[[bin]]
+name = "main"
+path = "DS210_final/main.rs"
