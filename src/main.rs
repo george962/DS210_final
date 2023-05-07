@@ -87,7 +87,6 @@ pub fn main() {
     generate_graph(&graph);
     calculate_centrality(&graph);
     generate_image();
-    println!("t")
 
 }
 
